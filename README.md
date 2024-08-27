@@ -1,6 +1,6 @@
 # **AIDA64 Extreme Activation Script**
 
-This script simplifies the process of activating WinRAR by automating the activation process with a single click. It includes features for copying necessary files and handling administrative privileges.
+This script simplifies the process of activating AIDA64 Extreme by automating the activation process with a single click. It includes features for copying necessary files and handling administrative privileges.
 
 ## 💪 Features
 
