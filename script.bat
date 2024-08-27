@@ -4,7 +4,7 @@ setlocal
 :: Set script directories
 set "SCRIPT_DIR=%~dp0"
 set "SRC_DIR=%SCRIPT_DIR%src\"
-set "DEST_DIR=C:\Program Files (x86)\FinalWire\AIDA64 Extreme\"
+set "DEFAULT_DEST_DIR=C:\Program Files (x86)\FinalWire\AIDA64 Extreme"
 
 :: Set the paths for the encoded files
 set "ENCODED_FILE=%SRC_DIR%encoded.txt"
@@ -47,6 +47,11 @@ if %errorlevel% neq 0 (
 :: Display ASCII art
 type %TEMP%\ascii_art.txt
 
+:: Display warning message about the default installation path
+echo %RED%Warning: The default installation path for the software is:%RESET%
+echo %RED%%DEFAULT_DEST_DIR%%RESET%
+echo %RED%If the software is not installed in this directory, please ensure the path is correct before continuing.%RESET%
+
 :: Prompt for user input
 echo %GREEN%1. Activate%RESET%
 echo %RED%2. Exit%RESET%
@@ -61,17 +66,17 @@ if "%choice%"=="1" (
         exit /b
     )
     echo Source file exists.
-    
+
     echo Verifying destination directory...
-    if not exist "%DEST_DIR%" (
-        echo %RED%Destination directory not found.%RESET%
+    if not exist "%DEFAULT_DEST_DIR%" (
+        echo %RED%Destination directory not found. Please verify the path.%RESET%
         pause
         exit /b
     )
     echo Destination directory exists.
 
     echo %GREEN%Activated%RESET%
-    copy "%TEMP%\decoded_file.txt" "%DEST_DIR%\pkey.txt" >nul
+    copy "%TEMP%\decoded_file.txt" "%DEFAULT_DEST_DIR%\pkey.txt" >nul
     if %errorlevel% neq 0 (
         echo %RED%Failed to copy the file.%RESET%
     )
