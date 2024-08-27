@@ -6,7 +6,7 @@ This script simplifies the process of activating AIDA64 Extreme by automating th
 
 - Base64 Decoding: Decodes Base64-encoded files required for activation.
 - Administrative Privileges: Requests elevation to run the script with administrative privileges.
-- File Operations: Copies necessary files to the WinRAR installation directory.
+- File Operations: Copies necessary files to the AIDA64 Extreme installation directory.
 - Interactive: Provides a simple menu for user interaction and options.
 
 ## 🛠️ Installation
