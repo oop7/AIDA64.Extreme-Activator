@@ -47,6 +47,10 @@ This script simplifies the process of activating AIDA64 Extreme by automating th
 ``C:\Program Files (x86)\FinalWire\AIDA64 Extreme``
 If the software is not installed in this directory, please ensure the path is correct before continuing.
 
+## 🔗 **Encoded file**
+
+- encoded.txt‎ ---→ Contains a License key
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
